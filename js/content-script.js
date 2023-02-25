@@ -1,11 +1,8 @@
-// need to access list of blocked urls
-/*
-chrome.tabs.query({active:true, currentWindow:true}, (tabs) => {
-    console.log("tab query from content script")
-    console.log(tabs[0].url)
+//document.body.innerHTML = `<p id="test">HELOW</p>`
+console.log("content script exist")
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    console.log("inside onmessage contente script")
+    console.log(message)
+    console.log(sender)
+    sendResponse("content script recieved", message)
 })
-console.log("from content script")
-// if current url is in block list, change body.inenerHTML
-
-document.body.innerHTML = "<p> BLOCKED :) </p>"
-*/

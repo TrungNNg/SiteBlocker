@@ -25,12 +25,13 @@ chrome.tabs.query({active:true, currentWindow:true}, (tabs) => {
                 temp.push(hostname)
                 chrome.storage.local.set({blockedSites:temp})
             } else {
+                // can not use Map, have to use array
                 chrome.storage.local.set({blockedSites:[hostname]})
             }
         })
     })
 
-    /*
+    
     const test_btn = document.getElementById("test_btn")
     test_btn.addEventListener("click", () => {
         
@@ -39,7 +40,7 @@ chrome.tabs.query({active:true, currentWindow:true}, (tabs) => {
         })
         
        //chrome.storage.local.clear()
-    })*/
+    })
 })
 
 
