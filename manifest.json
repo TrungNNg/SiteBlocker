@@ -3,6 +3,12 @@
     "name": "Trung Site Blocker",
     "version": "1.0.0",
     "description": "Site blocker Chrome extension",
+    "icons": {
+        "16": "icons/16.png",
+        "32": "icons/32.png",
+        "48": "icons/48.png",
+        "128": "icons/128.png"
+      },
 
     "action":{
         "default_popup": "html/popup.html"
@@ -29,7 +35,7 @@
     ],
     "web_accessible_resources": [
         {
-            "resources": ["css/style.css"],
+            "resources": ["css/style.css","html/blocked.html"],
             "matches": ["<all_urls>"]
         }
     ],

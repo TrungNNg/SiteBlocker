@@ -29,9 +29,13 @@ chrome.tabs.query({active:true, currentWindow:true}, (tabs) => {
                 chrome.storage.local.set({blockedSites:[hostname]})
             }
         })
+        const bottom_div = document.getElementById("bottomItem")
+        const result = document.createElement("p")
+        result.innerText = hostname + " has been blocked, refresh to see change."
+        bottom_div.appendChild(result)
     })
 
-    
+    /*
     const test_btn = document.getElementById("test_btn")
     test_btn.addEventListener("click", () => {
         
@@ -40,7 +44,7 @@ chrome.tabs.query({active:true, currentWindow:true}, (tabs) => {
         })
         
        //chrome.storage.local.clear()
-    })
+    })*/
 })
 
 
