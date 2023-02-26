@@ -19,7 +19,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     console.log(message.isBlocked)
     */
     if (message.isBlocked) {
-        window.location.replace(message.isBlocked);
+        window.location.replace(message.isBlocked)
     }
 
 })

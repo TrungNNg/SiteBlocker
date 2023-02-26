@@ -1,7 +1,7 @@
 // bg will listen for message from content script and return whether the current
 // url is in blocked list or not
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-    console.log("bg recived message")
+    //console.log("bg recived message")
     // 2. A page requested user data, respond with a copy of `user`
     if (message === 'get-user-data') {
         // get hostname of new url
@@ -31,7 +31,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
                 )
                 //sendResponse({isBlocked: block_html_url})
             } else {
-                console.log("data.blockedSites is empty")
+                //console.log("data.blockedSites is empty")
             }
         })
     }

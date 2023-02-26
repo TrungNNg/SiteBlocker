@@ -31,7 +31,7 @@ chrome.tabs.query({active:true, currentWindow:true}, (tabs) => {
         })
         const bottom_div = document.getElementById("bottomItem")
         const result = document.createElement("p")
-        result.innerText = hostname + " has been blocked, refresh to see change."
+        result.innerText = hostname + " has been blocked, refresh to see change"
         bottom_div.appendChild(result)
     })
 
